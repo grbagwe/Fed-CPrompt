@@ -1,0 +1,24 @@
+dataset: CIFAR100_Fed
+first_split_size: 10
+other_split_size: 10
+schedule:
+- 5
+schedule_type: cosine
+batch_size: 128
+optimizer: Adam
+lr: 0.0001
+momentum: 0.9
+weight_decay: 0
+model_type: zoo_ours
+model_name: vit_pt_imnet
+vis_flag: False
+max_task: -1
+dataroot: data
+workers: 8
+validation: False
+train_aug: True
+rand_split: True
+num_clients: 10
+num_rounds: 40
+iid: 0
+prompt_flag: l2p
